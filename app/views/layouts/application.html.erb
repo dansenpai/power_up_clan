@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PowerUp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<!-- PRELOADER -->
+	<div class="page-loader">
+		<div class="loader">Carregando...</div>
+	</div>
+	<!-- /PRELOADER -->
+	<%= yield %>
+
+	<!-- Scroll-up -->
+	<div class="scroll-up">
+			<a href="#totop"><i class="fa fa-angle-double-up"></i></a>
+	</div>
+	
+</body>
+</html>

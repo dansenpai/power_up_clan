@@ -1,0 +1,31 @@
+<%= render "/pages/header" %>
+ <!-- HOME -->
+	<section class="module module-header bg-dark bg-dark-50" data-background="/images/bg_login.jpg">
+		<div class="container">
+			<!-- MODULE TITLE -->
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3">
+					<%= bootstrap_flash %>
+					<h1 class="module-title font-alt align-center">Entrar</h1>
+
+					<div class="module-subtitle font-inc align-center">
+						<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+						  <div class="form-inputs">
+						    <%= f.input :email, required: false, autofocus: true %>
+						    <%= f.input :password, required: false %>
+						    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+						  </div>
+						  <div class="form-actions">
+						    <%= f.button :submit, "Log in" %>
+						  </div>
+						<% end %>
+						<%= render "devise/shared/links" %>
+					</div>
+				</div>
+			</div>
+			<!-- /MODULE TITLE -->
+		</div>
+	</section >
+ <!-- /HOME -->
+<%= render "/pages/footer" %>
+
