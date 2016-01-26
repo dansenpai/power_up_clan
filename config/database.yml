@@ -14,18 +14,16 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
-default: &defaults
+default: &default
   adapter: postgresql
   encoding: unicode
   #username: postgres
   #password: root
   #host: localhost
-  #username: sqeskiuukhprep
-  #password: unwfywnAOe5OkLe50BrTherdot
-  #host: ec2-54-83-43-118.compute-1.amazonaws.com
-  username: postgres
-  password: root
-  host: localhost
+  username: sqeskiuukhprep
+  password: unwfywnAOe5OkLe50BrTherdot
+  host: ec2-54-83-43-118.compute-1.amazonaws.com
+  port: 5432
 
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
