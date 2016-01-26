@@ -17,28 +17,23 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  #username: postgres
-  #password: root
-  #host: localhost
   username: sqeskiuukhprep
   password: unwfywnAOe5OkLe50BrTherdot
   host: ec2-54-83-43-118.compute-1.amazonaws.com
   port: 5432
-
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
 
 development:
   <<: *default
-  #database: crescentMoon_development
   database: d24ub6bffpm43f
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: crescentMoon
+  #username: applimpo
 
   # The password associated with the postgres role (username).
   #password:
@@ -66,7 +61,6 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  #database: crescentMoon_test
   database: d24ub6bffpm43f
 
 # As with config/secrets.yml, you never want to store sensitive information,
@@ -90,6 +84,6 @@ test:
 #
 production:
   <<: *default
-  database: crescentMoon_production
-  username: crescentMoon
-  password: <%= ENV['CRESCENTMOON_DATABASE_PASSWORD'] %>
+  database: d24ub6bffpm43f
+  username: sqeskiuukhprep
+  password: <%= ENV['APPLIMPO_DATABASE_PASSWORD'] %>
